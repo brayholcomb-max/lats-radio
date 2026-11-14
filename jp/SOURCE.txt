@@ -1,0 +1,14 @@
+Source photo: "Jordan Peterson by Gage Skidmore.jpg"
+Page:    https://commons.wikimedia.org/wiki/File:Jordan_Peterson_by_Gage_Skidmore.jpg
+File:    https://upload.wikimedia.org/wikipedia/commons/5/5c/Jordan_Peterson_by_Gage_Skidmore.jpg
+Author:  Gage Skidmore
+License: CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/)
+
+Changes: cropped to a square head-and-shoulders frame and resized to 480x480 (jp-shut.webp).
+jp-half.webp and jp-open.webp are edits of that crop: the lower jaw was digitally
+warped down and an open-mouth interior (teeth/dark) was painted in. Everything outside
+the mouth/chin region is unchanged. These derivative images are shared under CC BY-SA 3.0.
+
+Suggested credit line: Photo: Gage Skidmore, CC BY-SA 3.0, via Wikimedia Commons (modified).
+
+Round 2 (jp-0.webp to jp-2.webp): the half-open (jp-1) and wide-open (jp-2) mouths were generated with Google Gemini image editing (gemini.google.com, Gemini app image edit) from the 960 px crop; only the lower-face region of each AI result was pasted back onto the unchanged original crop (jp-0) through a feathered mask.

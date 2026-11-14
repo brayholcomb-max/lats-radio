@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>LATS Radio</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#101413">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="LATS Radio">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="icon-192.png">
+<style>
+:root{--bg:#101413;--card:#19201e;--line:#2a3431;--text:#f3efe4;--muted:#9ba69f;--accent:#f5b942;--ink:#17130a;--good:#7fd49a;--bad:#ef8f7a}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:1rem/1.4 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+  padding:calc(env(safe-area-inset-top) + .75rem) calc(env(safe-area-inset-right) + 1rem) calc(env(safe-area-inset-bottom) + 2rem) calc(env(safe-area-inset-left) + 1rem)}
+main{max-width:34rem;margin:0 auto}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;touch-action:manipulation}
+header{display:flex;justify-content:space-between;align-items:baseline;gap:.75rem;margin-bottom:.6rem}
+.brand{font-weight:700;letter-spacing:.08em;font-size:.8rem;text-transform:uppercase;color:var(--accent)}
+.day{font-size:.8rem;color:var(--muted);text-align:right}
+#now{background:var(--card);border:1px solid var(--line);border-radius:1.1rem;padding:1rem}
+#count{font-size:.75rem;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+#title{font-size:1.25rem;line-height:1.25;font-weight:700;margin:.2rem 0 .25rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+#speaker{font-size:.9rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#listen{font-size:.92rem;margin:.55rem 0 0;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+#listen b{color:var(--accent);font-weight:600}
+.bar{height:.4rem;background:var(--line);border-radius:1rem;overflow:hidden;margin:.85rem 0 .3rem}
+#fill{height:100%;width:0;background:var(--accent);border-radius:1rem}
+.times{display:flex;justify-content:space-between;font-size:.75rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.controls{display:flex;align-items:center;justify-content:space-between;margin:.5rem 0 .7rem}
+.side{width:4.5rem;height:4.5rem;border-radius:50%;border:1px solid var(--line);font-size:.85rem;font-weight:600;line-height:1.15}
+.side small{display:block;font-weight:400;color:var(--muted);font-size:.7rem}
+#play{width:7.75rem;height:7.75rem;border-radius:1.4rem;display:block;position:relative;overflow:hidden;background:#2b2b2b;box-shadow:0 0 0 .2rem var(--accent)}
+#play video,#play img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;-webkit-user-drag:none;pointer-events:none}
+#play img{opacity:0}
+@media (prefers-reduced-motion:reduce){#play video{visibility:hidden}#play img{opacity:1}#play.playing img{content:url(btn/end.webp)}}
+button:active{opacity:.7}
+.row{display:flex;gap:.5rem;align-items:center}
+.seg{display:flex;border:1px solid var(--line);border-radius:.7rem;overflow:hidden}
+.seg button{padding:.5rem .7rem;font-size:.85rem;min-width:3.1rem}
+.seg button.on{background:var(--text);color:var(--bg);font-weight:700}
+.rate{display:flex;gap:.4rem;margin-left:auto}
+.pill{border:1px solid var(--line);border-radius:2rem;padding:.5rem .8rem;font-size:.85rem;white-space:nowrap}
+.pill.on.up{background:var(--good);border-color:var(--good);color:#0b1a10;font-weight:700}
+.pill.on.down{background:var(--bad);border-color:var(--bad);color:#200a05;font-weight:700}
+#yt{display:inline-block;margin-top:.75rem;font-size:.8rem;color:var(--muted)}
+#msg{font-size:.85rem;color:var(--bad);margin:.5rem 0 0;min-height:0}
+h2{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:1.4rem 0 .5rem}
+#queue{list-style:none;margin:0;padding:0}
+#queue li{border-top:1px solid var(--line);padding:.7rem 0}
+#queue .go{display:flex;gap:.6rem;width:100%;text-align:left;align-items:flex-start}
+#queue .num{flex:none;width:1.6rem;height:1.6rem;border-radius:50%;border:1px solid var(--line);font-size:.75rem;display:grid;place-items:center;color:var(--muted);margin-top:.1rem}
+#queue li.done .num{background:var(--good);border-color:var(--good);color:#0b1a10;font-weight:700}
+#queue li.cur .num{border-color:var(--accent);color:var(--accent)}
+#queue li.cur .t{color:var(--accent)}
+#queue li.done .t{color:var(--muted)}
+#queue .t{font-size:.95rem;font-weight:600;line-height:1.3}
+#queue .s{font-size:.78rem;color:var(--muted)}
+#queue .rate{margin:.5rem 0 0 2.2rem;justify-content:flex-start}
+#queue .pill{padding:.35rem .7rem;font-size:.78rem}
+textarea{width:100%;min-height:6rem;background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:.8rem;padding:.7rem;font:inherit;font-size:1rem;resize:vertical}
+#copy{margin-top:.6rem;width:100%;padding:.9rem;border-radius:.8rem;background:var(--text);color:var(--bg);font-weight:700}
+#credit{font-size:.7rem;color:var(--muted);text-align:center;margin:1.5rem 0 0}
+#credit a{color:inherit}
+[hidden]{display:none!important}
+#who{display:flex;gap:.5rem;align-items:center;justify-content:center;flex-wrap:wrap;margin:.1rem 0 .6rem;font-size:.85rem;color:var(--muted)}
+#who button{padding:.35rem 1rem;border:1px solid var(--accent);border-radius:1rem;font-weight:600}
+#whoLine{text-align:center;font-size:.75rem;color:var(--muted);margin:1rem 0 0}
+#whoLine button{background:none;border:0;color:inherit;text-decoration:underline;font:inherit;padding:0}
+#copied{font-size:.8rem;color:var(--good);margin-top:.4rem;min-height:1.2em;text-align:center}
+</style>
+</head>
+<body>
+<main>
+<header><div class="brand">LATS Radio</div><div class="day" id="day"></div></header>
+<div id="who" hidden><span>Who's listening on this phone?</span><button data-w="bray">Bray</button><button data-w="matthew">Matthew</button></div>
+
+<section id="now">
+  <div id="count">Loading today's clips</div>
+  <div id="title">&nbsp;</div>
+  <div id="speaker">&nbsp;</div>
+  <p id="listen"></p>
+  <div class="bar"><div id="fill"></div></div>
+  <div class="times"><span id="cur">0:00</span><span id="dur">0:00</span></div>
+  <div class="controls">
+    <button class="side" id="back" aria-label="Back 15 seconds">Back<small>15 s</small></button>
+    <button id="play" aria-label="Play">
+      <video id="face" src="btn/tongue.mp4" poster="btn/start.webp" muted playsinline preload="auto" disablepictureinpicture disableremoteplayback aria-hidden="true" tabindex="-1"></video>
+      <img src="btn/start.webp" alt="" width="480" height="480">
+    </button>
+    <button class="side" id="next" aria-label="Next clip">Next<small>clip</small></button>
+  </div>
+  <div class="row">
+    <div class="seg" id="speed" role="group" aria-label="Speed">
+      <button data-r="1">1x</button><button data-r="1.25">1.25x</button><button data-r="1.5">1.5x</button>
+    </div>
+    <div class="rate" id="rateNow">
+      <button class="pill up" data-v="useful">Useful</button><button class="pill down" data-v="not useful">Not useful</button>
+    </div>
+  </div>
+  <p id="msg" role="status"></p>
+  <a id="yt" href="#" target="_blank" rel="noopener">Open in YouTube</a>
+</section>
+
+<h2>Queue</h2>
+<ol id="queue"></ol>
+
+<h2>Notes</h2>
+<textarea id="notes" placeholder="Anything to tell Claude about today's clips"></textarea>
+<button id="copy">Copy feedback for Claude</button>
+<div id="copied" role="status"></div>
+
+<p id="whoLine"><span id="whoNow"></span><button id="whoChange" hidden>change</button></p>
+<p id="credit">Play button: AI-generated animation made with Google from photos used with permission and a photo by <a href="https://commons.wikimedia.org/wiki/File:Jordan_Peterson_by_Gage_Skidmore.jpg" target="_blank" rel="noopener">Gage Skidmore</a>, CC BY-SA 3.0, modified.</p>
+
+<audio id="audio" preload="auto" playsinline></audio>
+</main>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var audio = $('audio');
+  var ep = null, st = null, idx = 0, pendingSeek = 0, lastSave = 0, lastT = 0, seekTries = 0, errs = 0;
+  var pre = { i: -1, url: null }, curBlob = null;
+
+  var store = {
+    get: function (k) { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } },
+    set: function (k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} },
+    prune: function (keep) {
+      try {
+        Object.keys(localStorage).forEach(function (k) {
+          if (k.indexOf('latsradio:day:') === 0 && k < 'latsradio:day:' + keep) localStorage.removeItem(k);
+        });
+      } catch (e) {}
+    }
+  };
+  var speed = Number(store.get('latsradio:speed')) || 1;
+
+  function fmt(s) { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60) + ':' + ('0' + (s % 60)).slice(-2); }
+  function save() { if (!ep || !st) return; st.cur = ep.items[idx].id; st.t = pendingSeek || audio.currentTime || 0; store.set('latsradio:day:' + ep.date, st); }
+  function msg(t) { $('msg').textContent = t || ''; }
+
+  // ---------- listening report (the nightly task reads it to see what was heard) ----------
+  var LOG = 'https://lats-radio-log.highschool-firewood.workers.dev/hit';
+  var logOn = !navigator.webdriver || /^(127\.0\.0\.1|localhost)$/.test(location.hostname);
+  var lastReport = 0, noteTimer = null;
+  var who = (function () {                 // which listener this phone belongs to; ?who=matthew sets it from a link
+    var q = (location.search.match(/[?&]who=(bray|matthew)\b/i) || [])[1];
+    if (q) { q = q.toLowerCase(); store.set('latsradio:who', q); return q; }
+    var w = store.get('latsradio:who'); return w === 'bray' || w === 'matthew' ? w : '';
+  })();
+  function showWho() {
+    $('who').hidden = !!who;
+    $('whoNow').textContent = who ? 'Listening as ' + (who === 'bray' ? 'Bray' : 'Matthew') + ' · ' : '';
+    $('whoChange').hidden = !who;
+  }
+  function report(leaving) {
+    if (!ep || !st || !logOn) return;
+    lastReport = Date.now();
+    var body = JSON.stringify({ d: ep.date, w: who || 'unknown', c: ep.items[idx].id, ct: Math.round(pendingSeek || audio.currentTime || 0),
+      fin: !!st.finished, sp: speed, n: st.notes || '', items: ep.items.map(function (x) {
+      return { id: x.id, t: x.title, k: x.kind || 'clip', u: x.url || '', L: Math.round(x.seconds || 0),
+        h: Math.round((st.heard && st.heard[x.id]) || 0), f: !!st.done[x.id], r: st.rate[x.id] || '' };
+    }) });
+    try {
+      if (leaving && navigator.sendBeacon && navigator.sendBeacon(LOG, new Blob([body], { type: 'text/plain' }))) return;
+      fetch(LOG, { method: 'POST', body: body, keepalive: true, mode: 'cors', headers: { 'Content-Type': 'text/plain' } }).catch(function () {});
+    } catch (e) {}
+  }
+
+  // ---------- loading ----------
+  function load(first) {
+    return fetch('episode.json?t=' + Date.now(), { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (j) {
+        if (!j.items || !j.items.length) throw new Error('empty');
+        if (ep && ep.sig === j.sig) return;
+        ep = j;
+        if (pre.url) { try { URL.revokeObjectURL(pre.url); } catch (e) {} }
+        pre = { i: -1, url: null };
+        st = store.get('latsradio:day:' + ep.date) || { cur: null, t: 0, done: {}, rate: {}, notes: '' };
+        st.done = st.done || {}; st.rate = st.rate || {}; st.heard = st.heard || {};
+        var cutoff = new Date(ep.date + 'T12:00:00'); cutoff.setDate(cutoff.getDate() - 7);
+        store.prune(cutoff.toISOString().slice(0, 10));
+        var i = ep.items.findIndex(function (x) { return x.id === st.cur; });
+        $('notes').value = st.notes || '';
+        var d = new Date(ep.date + 'T12:00:00');
+        $('day').textContent = d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' }) +
+          ' · ' + ep.items.length + ' clips · ' + Math.round(ep.totalSeconds / 60) + ' min';
+        msg('');
+        setTrack(i < 0 ? 0 : i, i < 0 ? 0 : (st.t || 0), false);
+      })
+      .catch(function () { if (!ep) { $('count').textContent = 'Could not load'; msg('Could not load today\'s clips. Check your connection, then press Play to retry.'); } });
+  }
+
+  // ---------- playback ----------
+  function setTrack(i, t, autoplay) {
+    idx = i;
+    var it = ep.items[i];
+    var old = curBlob;
+    if (pre.i === i && pre.url) { audio.src = pre.url; curBlob = pre.url; pre = { i: -1, url: null }; }
+    else { audio.src = it.file; curBlob = null; }
+    if (old && old !== curBlob) { try { URL.revokeObjectURL(old); } catch (e) {} }
+    pendingSeek = t || 0; lastT = pendingSeek; seekTries = 0; errs = 0;
+    audio.defaultPlaybackRate = speed; audio.playbackRate = speed;
+    $('fill').style.width = it.seconds ? (100 * pendingSeek / it.seconds) + '%' : '0';
+    $('cur').textContent = fmt(pendingSeek); $('dur').textContent = fmt(it.seconds);
+    render(); meta(); save();
+    if (autoplay) play(); else audio.load();
+    prefetch(i + 1);
+  }
+
+  function prefetch(i) {
+    if (!ep || i >= ep.items.length || pre.i === i) return;
+    if (pre.url) { try { URL.revokeObjectURL(pre.url); } catch (e) {} }
+    pre = { i: i, url: null };
+    fetch(ep.items[i].file).then(function (r) { if (!r.ok) throw 0; return r.blob(); })
+      .then(function (b) {
+        if (pre.i !== i) return;
+        pre.url = URL.createObjectURL(new Blob([b], { type: 'audio/mpeg' }));
+      }).catch(function () {});
+  }
+
+  function play() {
+    if (!ep) { load(); return; }
+    msg('');
+    var p = audio.play();
+    if (p && p.catch) p.catch(function (e) { if (e && e.name === 'NotAllowedError') msg('Press Play to start.'); });
+  }
+  function next(viaEnd) {
+    if (!ep) return;
+    if (viaEnd) st.done[ep.items[idx].id] = true;       // skipped clips are not marked finished
+    report();
+    if (idx < ep.items.length - 1) setTrack(idx + 1, 0, true);
+    else { audio.pause(); st.finished = true; setTrack(0, 0, false); }
+  }
+  function prev() {
+    if (!ep) return;
+    if (audio.currentTime > 5 || idx === 0) { audio.currentTime = 0; } else setTrack(idx - 1, 0, true);
+  }
+  function seekBy(d) {
+    var dur = isFinite(audio.duration) ? audio.duration : 1e9;
+    audio.currentTime = Math.min(Math.max(0, (audio.currentTime || 0) + d), Math.max(0, dur - 0.25));
+  }
+  function setSpeed(r) {
+    speed = r; store.set('latsradio:speed', r);
+    audio.defaultPlaybackRate = r; audio.playbackRate = r;
+    renderSpeed(); position();
+  }
+
+  function applySeek() {                 // iOS can ignore an early seek, so retry until it sticks
+    if (!pendingSeek) return;
+    var d = audio.duration;
+    if ((isFinite(d) && d > 0 && pendingSeek > d - 1) || seekTries > 8 ||
+        Math.abs((audio.currentTime || 0) - pendingSeek) < 1.5) { pendingSeek = 0; return; }
+    seekTries++;
+    try { audio.currentTime = pendingSeek; } catch (e) {}
+  }
+  audio.addEventListener('loadedmetadata', function () {
+    applySeek();
+    audio.playbackRate = speed;
+    $('dur').textContent = fmt(audio.duration);
+    position();
+  });
+  ['loadeddata', 'canplay', 'playing', 'seeked'].forEach(function (ev) { audio.addEventListener(ev, applySeek); });
+  audio.addEventListener('timeupdate', function () {
+    if (pendingSeek) { applySeek(); if (pendingSeek) return; }
+    var dt = audio.currentTime - lastT;
+    if (!audio.paused && dt > 0 && dt < 3 && st) st.heard[ep.items[idx].id] = (st.heard[ep.items[idx].id] || 0) + dt;
+    lastT = audio.currentTime;
+    var d = audio.duration || (ep && ep.items[idx].seconds) || 0;
+    $('fill').style.width = d ? Math.min(100, 100 * audio.currentTime / d) + '%' : '0';
+    $('cur').textContent = fmt(audio.currentTime);
+    var n = Date.now();
+    if (n - lastSave > 3000) { lastSave = n; save(); position(); }
+    if (n - lastReport > 60000) report();
+  });
+  audio.addEventListener('play', function () { audio.playbackRate = speed; icon(); position(); });
+  audio.addEventListener('playing', function () { msg(''); icon(); if (st && st.finished) { st.finished = false; render(); } });
+  audio.addEventListener('pause', function () { icon(); save(); position(); report(); });
+  audio.addEventListener('ended', function () { next(true); });
+  audio.addEventListener('error', function () {
+    if (!ep || !audio.getAttribute('src')) return;
+    var t = pendingSeek || lastT || 0, at = idx;
+    var retry = function () { if (idx !== at) return; pendingSeek = t; seekTries = 0; audio.src = ep.items[at].file; play(); };
+    if (curBlob) {                       // preloaded copy failed: fall back to the network file
+      var was = curBlob; curBlob = null;
+      try { URL.revokeObjectURL(was); } catch (e) {}
+      retry();
+      return;
+    }
+    if (errs < 4) { setTimeout(retry, [500, 3000, 8000, 15000][errs++]); return; }   // signal dropped: try again
+    msg('This clip would not load. Check your connection, then press Play.');
+    icon();
+  });
+
+  // ---------- lock screen / headphones ----------
+  function meta() {
+    if (!('mediaSession' in navigator) || !ep) return;
+    var it = ep.items[idx];
+    try {
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: it.title, artist: it.speaker, album: 'LATS Radio',
+        artwork: [{ src: 'icon-512.png', sizes: '512x512', type: 'image/png' }]
+      });
+    } catch (e) {}
+  }
+  function position() {
+    if (!('mediaSession' in navigator) || !navigator.mediaSession.setPositionState) return;
+    if (!isFinite(audio.duration) || !audio.duration) return;
+    try {
+      navigator.mediaSession.setPositionState({ duration: audio.duration, playbackRate: audio.playbackRate || 1,
+        position: Math.min(audio.currentTime || 0, audio.duration) });
+    } catch (e) {}
+  }
+  if ('mediaSession' in navigator) {
+    var on = function (a, h) { try { navigator.mediaSession.setActionHandler(a, h); } catch (e) {} };
+    on('play', function () { play(); });
+    on('pause', function () { audio.pause(); });
+    on('nexttrack', function () { next(); });
+    on('previoustrack', function () { prev(); });
+    // iPhone's lock screen has room for one pair of buttons and would show skip-seconds instead of
+    // next/previous clip if the seek handlers were set, so they are only set elsewhere.
+    var iOS = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    if (!iOS) {
+      on('seekbackward', function (d) { seekBy(-((d && d.seekOffset) || 15)); });
+      on('seekforward', function (d) { seekBy((d && d.seekOffset) || 30); });
+    }
+  }
+
+  // ---------- rendering ----------
+  var face = $('face'), faceOn = false;
+  face.muted = true;
+  function animateFace(on) {            // press Play: both faces turn into tongues out and hold; pause: back to the start
+    if (on === faceOn) return;
+    faceOn = on;
+    try {
+      if (on) { face.currentTime = 0; var p = face.play(); if (p && p.catch) p.catch(function () {}); }
+      else { face.pause(); face.currentTime = 0; }
+    } catch (e) {}
+  }
+  function icon() {
+    var playing = !audio.paused && !audio.ended;
+    animateFace(playing);
+    $('play').classList.toggle('playing', playing);
+    $('play').setAttribute('aria-label', playing ? 'Pause' : 'Play');
+  }
+  function renderSpeed() {
+    [].forEach.call($('speed').children, function (b) { b.classList.toggle('on', Number(b.dataset.r) === speed); });
+  }
+  function pills(box, id) {
+    [].forEach.call(box.children, function (b) { b.classList.toggle('on', st.rate[id] === b.dataset.v); });
+  }
+  function render() {
+    var it = ep.items[idx];
+    $('count').textContent = (st.finished ? 'Done for today · ' : '') + (it.kind === 'lesson' ? 'Lesson ' : 'Clip ') + (idx + 1) + ' of ' + ep.items.length + (it.idea ? ' · ' + it.idea : '');
+    $('title').textContent = it.title;
+    $('speaker').textContent = it.speaker;
+    $('listen').innerHTML = '';
+    if (it.listenFor) {
+      var b = document.createElement('b'); b.textContent = 'Listen for: ';
+      $('listen').appendChild(b); $('listen').appendChild(document.createTextNode(it.listenFor));
+    }
+    $('yt').href = it.url || '#'; $('yt').style.display = it.url ? '' : 'none';
+    $('yt').textContent = it.kind === 'lesson' ? 'Open in NotebookLM' : 'Open in YouTube';
+    pills($('rateNow'), it.id);
+    var q = $('queue'); q.innerHTML = '';
+    ep.items.forEach(function (x, i) {
+      var li = document.createElement('li');
+      if (st.done[x.id]) li.className = 'done';
+      if (i === idx) li.className += ' cur';
+      var go = document.createElement('button'); go.className = 'go'; go.dataset.i = i;
+      var num = document.createElement('span'); num.className = 'num'; num.textContent = st.done[x.id] ? '✓' : i + 1;
+      var box = document.createElement('span');
+      var t = document.createElement('div'); t.className = 't'; t.textContent = x.title;
+      var s = document.createElement('div'); s.className = 's'; s.textContent = fmt(x.seconds) + ' · ' + x.speaker;
+      box.appendChild(t); box.appendChild(s); go.appendChild(num); go.appendChild(box); li.appendChild(go);
+      var r = document.createElement('div'); r.className = 'rate'; r.dataset.id = x.id;
+      r.innerHTML = '<button class="pill up" data-v="useful">Useful</button><button class="pill down" data-v="not useful">Not useful</button>';
+      pills(r, x.id); li.appendChild(r); q.appendChild(li);
+    });
+    renderSpeed(); icon();
+  }
+  function rate(id, v) { st.rate[id] = st.rate[id] === v ? undefined : v; save(); render(); report(); }
+
+  // ---------- controls ----------
+  $('play').addEventListener('click', function () { if (!ep) return load(); if (audio.paused) play(); else audio.pause(); });
+  $('next').addEventListener('click', function () { next(); });
+  $('back').addEventListener('click', function () { seekBy(-15); });
+  $('speed').addEventListener('click', function (e) { if (e.target.dataset.r) setSpeed(Number(e.target.dataset.r)); });
+  $('rateNow').addEventListener('click', function (e) { if (ep && e.target.dataset.v) rate(ep.items[idx].id, e.target.dataset.v); });
+  $('queue').addEventListener('click', function (e) {
+    var p = e.target.closest('.pill'), g = e.target.closest('.go');
+    if (p) rate(p.parentNode.dataset.id, p.dataset.v);
+    else if (g) setTrack(Number(g.dataset.i), 0, true);
+  });
+  $('notes').addEventListener('input', function () { if (st) { st.notes = $('notes').value; save(); clearTimeout(noteTimer); noteTimer = setTimeout(report, 4000); } });
+  $('copy').addEventListener('click', function () {
+    if (!ep) return;
+    var lines = ['LATS Radio feedback for ' + ep.date];
+    ep.items.forEach(function (x, i) {
+      lines.push((i + 1) + '. ' + x.id + ': ' + (st.rate[x.id] || 'not rated') + (st.done[x.id] ? ' (finished)' : ' (not finished)'));
+    });
+    lines.push('', 'Notes:', ($('notes').value || '').trim() || '(none)');
+    var text = lines.join('\n');
+    var ok = function () { $('copied').textContent = 'Copied. Paste it to Claude.'; setTimeout(function () { $('copied').textContent = ''; }, 4000); };
+    var fallback = function () {
+      var ta = document.createElement('textarea'); ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0, text.length);
+      try { document.execCommand('copy'); ok(); } catch (e) { $('copied').textContent = 'Could not copy.'; }
+      document.body.removeChild(ta);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(ok, fallback); else fallback();
+  });
+
+  showWho();
+  $('who').addEventListener('click', function (e) { var w = e.target.dataset && e.target.dataset.w; if (!w) return; who = w; store.set('latsradio:who', w); showWho(); report(); });
+  $('whoChange').addEventListener('click', function () { who = ''; store.set('latsradio:who', ''); showWho(); });
+  window.addEventListener('pagehide', function () { save(); report(true); });
+  window.addEventListener('pageshow', function (e) { if (e.persisted && audio.paused) load(); });
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) { save(); report(true); }
+    else if (audio.paused) load();        // a new day's clips appear when the app is reopened
+  });
+
+  renderSpeed();
+  load(true);
+})();
+</script>
+</body>
+</html>
