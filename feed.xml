@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>LATS Radio</title>
+<link>https://brayholcomb-max.github.io/lats-radio/</link>
+<atom:link href="https://brayholcomb-max.github.io/lats-radio/feed.xml" rel="self" type="application/rss+xml"/>
+<language>en-us</language>
+<description>Daily learning clips for the LATS startup search. Private feed.</description>
+<itunes:author>LATS</itunes:author>
+<itunes:type>serial</itunes:type>
+<itunes:image href="https://brayholcomb-max.github.io/lats-radio/cover.png"/>
+<itunes:category text="Business"/>
+<itunes:explicit>false</itunes:explicit>
+<itunes:block>Yes</itunes:block>
+<lastBuildDate>Fri, 20 Nov 2026 21:36:50 -0500</lastBuildDate>
+<item>
+<title>01. Orphaned solar primer: when the installer is gone</title>
+<description>New subject, number nine on your board. An orphaned system is solar whose installer closed. PTO is permission to operate from the utility. Listen for which warranty survives and which dies. Listen for: When the installer is gone, which warranty still pays, and what does the owner pay for? Claim: When an installer closes, the manufacturer equipment warranty survives but the workmanship warranty dies, so owners pay a new service company for labor, usually time and materials, plus optional monitoring plans. https://www.youtube.com/watch?v=ETNKpMKaRlM&amp;t=15s</description>
+<enclosure url="https://brayholcomb-max.github.io/lats-radio/zfhd0grahe6gro88w4idyrwm/2026-11-21/01-orphan-solar-primer-04b367cb.mp3" length="2278518" type="audio/mpeg"/>
+<guid isPermaLink="false">lats-radio-2026-11-21-01-orphan-solar-primer-04b367cb</guid>
+<pubDate>Sat, 21 Nov 2026 06:01:00 -0500</pubDate>
+<itunes:duration>285</itunes:duration>
+<itunes:episode>1</itunes:episode>
+<itunes:author>Chad and Warren, Paradise Energy Solutions (solar installer and service)</itunes:author>
+<itunes:explicit>false</itunes:explicit>
+</item>
+<item>
+<title>02. A solar CEO built a service department to 1.5 million</title>
+<description>Joy is CEO of an Arizona solar and roofing company. A truck roll is sending a tech out. Listen for how charging for service, including orphaned systems, became its own business. Listen for: What does the service department actually do, and how big did it get? Claim: She stopped free service, built a paid department doing inverter swaps, rewires, critter repairs and inspections, now on track for over 1 million and possibly 1.5 million a year, and it feeds roofing upsells. https://www.youtube.com/watch?v=hXBRND25YVM&amp;t=645s</description>
+<enclosure url="https://brayholcomb-max.github.io/lats-radio/zfhd0grahe6gro88w4idyrwm/2026-11-21/02-joy-service-million-af10f222.mp3" length="1514885" type="audio/mpeg"/>
+<guid isPermaLink="false">lats-radio-2026-11-21-02-joy-service-million-af10f222</guid>
+<pubDate>Sat, 21 Nov 2026 06:02:00 -0500</pubDate>
+<itunes:duration>189</itunes:duration>
+<itunes:episode>2</itunes:episode>
+<itunes:author>Joy, CEO, American Solar and Roofing (Arizona)</itunes:author>
+<itunes:explicit>false</itunes:explicit>
+</item>
+<item>
+<title>03. What service techs fix most: dead inverters</title>
+<description>Same service company, on what a diagnostic visit finds. An inverter turns panel DC power into household AC power. Listen for why it fails and how an owner notices. Listen for: How long is the inverter warranty, and what signs tell an owner it failed? Claim: Inverters usually carry 10 to 12 year warranties but fail from heat, defects, grid events and lightning; owners see it as red lights, alerts or zero production in their monitoring portal. https://www.youtube.com/watch?v=0BVx8gOMJYY&amp;t=215s</description>
+<enclosure url="https://brayholcomb-max.github.io/lats-radio/zfhd0grahe6gro88w4idyrwm/2026-11-21/03-paradise-what-breaks-8e1caef2.mp3" length="1014784" type="audio/mpeg"/>
+<guid isPermaLink="false">lats-radio-2026-11-21-03-paradise-what-breaks-8e1caef2</guid>
+<pubDate>Sat, 21 Nov 2026 06:03:00 -0500</pubDate>
+<itunes:duration>127</itunes:duration>
+<itunes:episode>3</itunes:episode>
+<itunes:author>Chad, Paradise Energy Solutions service team</itunes:author>
+<itunes:explicit>false</itunes:explicit>
+</item>
+<item>
+<title>04. Back office primer: pricing bookkeeping per transaction</title>
+<description>New subject, number six: a back office for contractors. Bookkeeping means recording and reconciling every bank transaction monthly. Zach has 82 clients averaging 500 dollars a month. Listen for his quoting formula. Listen for: How does he turn three bank statements into a monthly price? Claim: He counts three months of bank and card transactions, averages them, and charges 2 dollars per transaction when new and 3 dollars now, as a fixed monthly fee, with each client taking 5 to 45 minutes a week. https://www.youtube.com/watch?v=rfwpeotNYo0&amp;t=525s</description>
+<enclosure url="https://brayholcomb-max.github.io/lats-radio/zfhd0grahe6gro88w4idyrwm/2026-11-21/04-zach-per-transaction-9faa7ade.mp3" length="1910493" type="audio/mpeg"/>
+<guid isPermaLink="false">lats-radio-2026-11-21-04-zach-per-transaction-9faa7ade</guid>
+<pubDate>Sat, 21 Nov 2026 06:04:00 -0500</pubDate>
+<itunes:duration>239</itunes:duration>
+<itunes:episode>4</itunes:episode>
+<itunes:author>Zach Pasquariello, solo bookkeeper, 82 monthly clients</itunes:author>
+<itunes:explicit>false</itunes:explicit>
+</item>
+<item>
+<title>05. Latino owners start fast, then get bad advice</title>
+<description>A tax firm owner who serves Latino business owners. A notary shop here means an unlicensed preparer. Payroll taxes are what an employer owes on wages. Listen for where owners go wrong. Listen for: Where do Latino contractors get their advice today, and what mistake follows? Claim: Latino owners are great at starting restaurants, construction and landscaping firms, but often rely on notary shops and unlicensed preparers who tell them to pay everyone as contractors or in cash, which leads to payroll tax trouble. https://www.youtube.com/watch?v=GeZ3qpa0qDc&amp;t=495s</description>
+<enclosure url="https://brayholcomb-max.github.io/lats-radio/zfhd0grahe6gro88w4idyrwm/2026-11-21/05-latino-start-cant-scale-b6058818.mp3" length="1048682" type="audio/mpeg"/>
+<guid isPermaLink="false">lats-radio-2026-11-21-05-latino-start-cant-scale-b6058818</guid>
+<pubDate>Sat, 21 Nov 2026 06:05:00 -0500</pubDate>
+<itunes:duration>131</itunes:duration>
+<itunes:episode>5</itunes:episode>
+<itunes:author>Jose Zavala, owner, ZTX Advisors; Tony Martinez, Latino Tax Professionals Association</itunes:author>
+<itunes:explicit>false</itunes:explicit>
+</item>
+<item>
+<title>06. Software in English, support in Spanish</title>
+<description>Same firm owner, on what Spanish-first should mean. This tests your idea's core: is the gap the language of the product, or the language of the help? Listen for: What must be in Spanish, and what can stay in English? Claim: Many Latino owners speak English and are fine with English software, but they want the training, content and support in Spanish, from someone bilingual and bicultural. https://www.youtube.com/watch?v=GeZ3qpa0qDc&amp;t=855s</description>
+<enclosure url="https://brayholcomb-max.github.io/lats-radio/zfhd0grahe6gro88w4idyrwm/2026-11-21/06-latino-spanish-support-e604e9d3.mp3" length="921564" type="audio/mpeg"/>
+<guid isPermaLink="false">lats-radio-2026-11-21-06-latino-spanish-support-e604e9d3</guid>
+<pubDate>Sat, 21 Nov 2026 06:06:00 -0500</pubDate>
+<itunes:duration>115</itunes:duration>
+<itunes:episode>6</itunes:episode>
+<itunes:author>Jose Zavala, owner, ZTX Advisors</itunes:author>
+<itunes:explicit>false</itunes:explicit>
+</item>
+<item>
+<title>07. A niche firm charges 1,200 a month median</title>
+<description>Jason Staats coaches accounting firms. He reviews a real firm that serves only ranchers nationwide. A vertical firm serves one industry. Listen for what one niche lets a firm charge. Listen for: What is the minimum, the median, and what new clients pay? Claim: A ranching-only firm earns 60 percent from bookkeeping, has a 500 dollar monthly minimum, a 1,200 dollar median client and new clients onboarding above 1,500 dollars a month. https://www.youtube.com/watch?v=bV-dRxzp-1Q&amp;t=135s</description>
+<enclosure url="https://brayholcomb-max.github.io/lats-radio/zfhd0grahe6gro88w4idyrwm/2026-11-21/07-staats-ranch-niche-b40bad1d.mp3" length="1415415" type="audio/mpeg"/>
+<guid isPermaLink="false">lats-radio-2026-11-21-07-staats-ranch-niche-b40bad1d</guid>
+<pubDate>Sat, 21 Nov 2026 06:07:00 -0500</pubDate>
+<itunes:duration>177</itunes:duration>
+<itunes:episode>7</itunes:episode>
+<itunes:author>Jason Staats, accounting firm coach, reviewing a submitted firm</itunes:author>
+<itunes:explicit>false</itunes:explicit>
+</item>
+<item>
+<title>08. Win a niche by standing at its gates</title>
+<description>Same coach, on how niche firms find clients. A gate is a step everyone in an industry must pass, like a licensing class. Think of where new Latino contractors must pass. Listen for: What is a gate, and how did one firm win 80 percent of a franchise's owners? Claim: A niche firm's biggest drivers were its podcast and teaching inside other groups' classes; one firm owner teaches the mandatory class for new grocery franchisees and wins about 80 percent of them as clients. https://www.youtube.com/watch?v=bV-dRxzp-1Q&amp;t=720s</description>
+<enclosure url="https://brayholcomb-max.github.io/lats-radio/zfhd0grahe6gro88w4idyrwm/2026-11-21/08-staats-gates-96b98f43.mp3" length="1054475" type="audio/mpeg"/>
+<guid isPermaLink="false">lats-radio-2026-11-21-08-staats-gates-96b98f43</guid>
+<pubDate>Sat, 21 Nov 2026 06:08:00 -0500</pubDate>
+<itunes:duration>132</itunes:duration>
+<itunes:episode>8</itunes:episode>
+<itunes:author>Jason Staats, accounting firm coach</itunes:author>
+<itunes:explicit>false</itunes:explicit>
+</item>
+<item>
+<title>09. Cleanouts: sometimes they pay you, sometimes you pay them</title>
+<description>Number four, estate lots. This reseller runs house cleanouts with a junk hauler partner and resells the finds. A trustee manages a dead person's estate. Listen for the three ways a job is priced. Listen for: When does the family pay them, and when do they pay the family? Claim: Pricing depends on the house: all trash means the family pays for removal and the dumpster; valuable contents mean they pay the trustee; mixed houses get a discount offset by resale value. https://www.youtube.com/watch?v=bnpFwz2dRKI&amp;t=375s</description>
+<enclosure url="https://brayholcomb-max.github.io/lats-radio/zfhd0grahe6gro88w4idyrwm/2026-11-21/09-pm-paid-or-pay-575deed1.mp3" length="1203724" type="audio/mpeg"/>
+<guid isPermaLink="false">lats-radio-2026-11-21-09-pm-paid-or-pay-575deed1</guid>
+<pubDate>Sat, 21 Nov 2026 06:09:00 -0500</pubDate>
+<itunes:duration>150</itunes:duration>
+<itunes:episode>9</itunes:episode>
+<itunes:author>Reseller who runs estate cleanouts with partner Tony</itunes:author>
+<itunes:explicit>false</itunes:explicit>
+</item>
+<item>
+<title>10. Pricing an estate cleanout by man-hours per load</title>
+<description>Same subject, the hauling side. Josh owns a junk removal company and is on an estate cleanout before an estate sale. A load is one full trailer. Listen for his labor math. Listen for: How many man-hours is a load worth, and when does he add a labor or trip charge? Claim: Each full load is allotted four man-hours; on estate jobs he quotes a load price plus a labor price, which sometimes adds 400 to 500 dollars, and he adds a dollar a mile when the landfill is far. https://www.youtube.com/watch?v=0dYqJW59Zxg&amp;t=405s</description>
+<enclosure url="https://brayholcomb-max.github.io/lats-radio/zfhd0grahe6gro88w4idyrwm/2026-11-21/10-jm-man-hours-46de8e6d.mp3" length="1651116" type="audio/mpeg"/>
+<guid isPermaLink="false">lats-radio-2026-11-21-10-jm-man-hours-46de8e6d</guid>
+<pubDate>Sat, 21 Nov 2026 06:10:00 -0500</pubDate>
+<itunes:duration>206</itunes:duration>
+<itunes:episode>10</itunes:episode>
+<itunes:author>Josh, owner, JM Junk Movers</itunes:author>
+<itunes:explicit>false</itunes:explicit>
+</item>
+<item>
+<title>11. Legionella primer: what New Jersey's new law requires</title>
+<description>New subject, number seven on your board. A water management program is a written plan to stop Legionella bacteria growing in a building's pipes. Steve Spiwak of Nalco, a treatment vendor, explains New Jersey's law. Listen for: Which buildings must have a plan, does it cover the whole building, and what are the fines? Claim: New Jersey's law gives building owners 24 months to write an ASHRAE 188 water management program for at-risk water systems in listed buildings such as health care and senior housing, with testing, posted notice, and fines of 2,000 then 5,000 dollars. https://www.youtube.com/watch?v=NNik-gSVbEQ&amp;t=375s</description>
+<enclosure url="https://brayholcomb-max.github.io/lats-radio/zfhd0grahe6gro88w4idyrwm/2026-11-21/11-nalco-nj-who-must-6508858d.mp3" length="1610594" type="audio/mpeg"/>
+<guid isPermaLink="false">lats-radio-2026-11-21-11-nalco-nj-who-must-6508858d</guid>
+<pubDate>Sat, 21 Nov 2026 06:11:00 -0500</pubDate>
+<itunes:duration>201</itunes:duration>
+<itunes:episode>11</itunes:episode>
+<itunes:author>Steve Spiwak, Nalco Water (about 28 years)</itunes:author>
+<itunes:explicit>false</itunes:explicit>
+</item>
+<item>
+<title>12. Who may write a Legionella plan in New Jersey</title>
+<description>Same presenter, on your board's biggest Legionella question: who may legally write the plan. ASHRAE 188 is the standard plans follow. ASSE is a certification body. He sells treatment, so weigh it. Listen for: Is any certificate required to write a New Jersey plan? Claim: He says claims that an ASSE certification is required are false: the law requires no certification, only that the plan be based on ASHRAE 188 and CDC practice. https://www.youtube.com/watch?v=NNik-gSVbEQ&amp;t=240s</description>
+<enclosure url="https://brayholcomb-max.github.io/lats-radio/zfhd0grahe6gro88w4idyrwm/2026-11-21/12-nalco-no-cert-2c9c47dd.mp3" length="524519" type="audio/mpeg"/>
+<guid isPermaLink="false">lats-radio-2026-11-21-12-nalco-no-cert-2c9c47dd</guid>
+<pubDate>Sat, 21 Nov 2026 06:12:00 -0500</pubDate>
+<itunes:duration>66</itunes:duration>
+<itunes:episode>12</itunes:episode>
+<itunes:author>Steve Spiwak, Nalco Water (about 28 years)</itunes:author>
+<itunes:explicit>false</itunes:explicit>
+</item>
+<item>
+<title>13. Buyers cannot tell which Legionella firm to hire</title>
+<description>Patsy Root sits on a hospital's water management team and speaks to water treaters, the chemical service firms that usually write these plans. Listen for what buyers say they cannot do when hiring help. Listen for: What is the buyers' biggest problem, and what should a firm bring to win them? Claim: Facility groups usually hire water treaters but say they do not know how to choose the right one; she tells firms to bring references, a redacted sample water management plan, and time to teach the basics. https://www.youtube.com/watch?v=Ok7f-3c4DG4&amp;t=885s</description>
+<enclosure url="https://brayholcomb-max.github.io/lats-radio/zfhd0grahe6gro88w4idyrwm/2026-11-21/13-root-how-buyers-choose-7eb6e9c3.mp3" length="700510" type="audio/mpeg"/>
+<guid isPermaLink="false">lats-radio-2026-11-21-13-root-how-buyers-choose-7eb6e9c3</guid>
+<pubDate>Sat, 21 Nov 2026 06:13:00 -0500</pubDate>
+<itunes:duration>88</itunes:duration>
+<itunes:episode>13</itunes:episode>
+<itunes:author>Patsy Root, Legionella specialist on a hospital water management team</itunes:author>
+<itunes:explicit>false</itunes:explicit>
+</item>
+<item>
+<title>14. Certificates versus references when hiring a plan writer</title>
+<description>Same speaker. CWT means Certified Water Technologist; ASSE 12080 is a Legionella certificate. This tells you whether a new firm needs a certificate to win a facility, or something else. Listen for: Do building owners understand these certificates, and what should they weigh instead? Claim: Most people outside the industry do not know what CWT or ASSE 12080 mean; she tells owners a certificate is a foundation but to weigh hands-on experience, references and sample work when vetting a third party. https://www.youtube.com/watch?v=Ok7f-3c4DG4&amp;t=1200s</description>
+<enclosure url="https://brayholcomb-max.github.io/lats-radio/zfhd0grahe6gro88w4idyrwm/2026-11-21/14-root-certs-vs-references-6d14588d.mp3" length="1298200" type="audio/mpeg"/>
+<guid isPermaLink="false">lats-radio-2026-11-21-14-root-certs-vs-references-6d14588d</guid>
+<pubDate>Sat, 21 Nov 2026 06:14:00 -0500</pubDate>
+<itunes:duration>162</itunes:duration>
+<itunes:episode>14</itunes:episode>
+<itunes:author>Patsy Root, Legionella specialist on a hospital water management team</itunes:author>
+<itunes:explicit>false</itunes:explicit>
+</item>
+<item>
+<title>15. Data hall primer: what a cleaner must do before entering</title>
+<description>Number ten on your board: data hall clean crews. The founder of C4, a London cleaner that moved into data centres, says what changes. RAMs means risk assessments and method statements, the safety paperwork. Listen for: What paperwork and access steps come before any cleaning starts? Claim: Before any data centre clean, staff training must be evidenced in a shared system, site access raised ahead of time, the scope briefed, and RAMs approved, which clients send back for changes about 90 percent of the time. https://www.youtube.com/watch?v=0bzBFVHW9ME&amp;t=555s</description>
+<enclosure url="https://brayholcomb-max.github.io/lats-radio/zfhd0grahe6gro88w4idyrwm/2026-11-21/15-c4-datacenter-compliance-c87d6bcd.mp3" length="1041983" type="audio/mpeg"/>
+<guid isPermaLink="false">lats-radio-2026-11-21-15-c4-datacenter-compliance-c87d6bcd</guid>
+<pubDate>Sat, 21 Nov 2026 06:15:00 -0500</pubDate>
+<itunes:duration>130</itunes:duration>
+<itunes:episode>15</itunes:episode>
+<itunes:author>Founder, C4 Cleaning (UK), self-delivers data centre cleaning</itunes:author>
+<itunes:explicit>false</itunes:explicit>
+</item>
+<item>
+<title>16. Big cleaning firms sub data centre work to small ones</title>
+<description>Same founder, on your board's question: will a critical-clean firm sub labor to a new crew? Self-deliver means using your own staff. Listen for who subcontracts and why clients still call him directly. Listen for: Who subcontracts the work, and why does he refuse to? Claim: Large global cleaning companies use their leverage to win contracts and subcontract much of the work to smaller businesses, while C4 self-delivers and wins on direct, fast access to a decision-maker when a data centre needs something done. https://www.youtube.com/watch?v=0bzBFVHW9ME&amp;t=770s</description>
+<enclosure url="https://brayholcomb-max.github.io/lats-radio/zfhd0grahe6gro88w4idyrwm/2026-11-21/16-c4-big-firms-subcontract-c326c965.mp3" length="991407" type="audio/mpeg"/>
+<guid isPermaLink="false">lats-radio-2026-11-21-16-c4-big-firms-subcontract-c326c965</guid>
+<pubDate>Sat, 21 Nov 2026 06:16:00 -0500</pubDate>
+<itunes:duration>124</itunes:duration>
+<itunes:episode>16</itunes:episode>
+<itunes:author>Founder, C4 Cleaning (UK), self-delivers data centre cleaning</itunes:author>
+<itunes:explicit>false</itunes:explicit>
+</item>
+<item>
+<title>17. Runner-up: a 250 dollar floor, priced per company</title>
+<description>Runner-up. Same bookkeeper on minimums. Many contractors run more than one company. An entity is a separate company with its own books. Listen for how he prices each one. Listen for: What is his floor price, and how does he charge an owner with several companies? Claim: He charges at least 250 dollars a month for one company, and for owners with several he still charges per entity, going as low as 150 dollars for a nearly dormant one. https://www.youtube.com/watch?v=rfwpeotNYo0&amp;t=765s</description>
+<enclosure url="https://brayholcomb-max.github.io/lats-radio/zfhd0grahe6gro88w4idyrwm/2026-11-21/17-zach-minimums-b6db8d35.mp3" length="706975" type="audio/mpeg"/>
+<guid isPermaLink="false">lats-radio-2026-11-21-17-zach-minimums-b6db8d35</guid>
+<pubDate>Sat, 21 Nov 2026 06:17:00 -0500</pubDate>
+<itunes:duration>88</itunes:duration>
+<itunes:episode>17</itunes:episode>
+<itunes:author>Zach Pasquariello, solo bookkeeper, 82 monthly clients</itunes:author>
+<itunes:explicit>false</itunes:explicit>
+</item>
+<item>
+<title>18. Runner-up: never test before you know the response</title>
+<description>Runner-up. Same Legionella speaker on the most common mistake: a building tests one cooling tower sample with no plan. A positive result means Legionella was found. Listen for: What should a building decide before it ever takes a sample? Claim: She says many buildings take one cooling tower sample with no plan, and her rule is never test for Legionella until you know what you will do if it comes back positive. https://www.youtube.com/watch?v=Ok7f-3c4DG4&amp;t=3240s</description>
+<enclosure url="https://brayholcomb-max.github.io/lats-radio/zfhd0grahe6gro88w4idyrwm/2026-11-21/18-root-test-first-95442b95.mp3" length="574915" type="audio/mpeg"/>
+<guid isPermaLink="false">lats-radio-2026-11-21-18-root-test-first-95442b95</guid>
+<pubDate>Sat, 21 Nov 2026 06:18:00 -0500</pubDate>
+<itunes:duration>72</itunes:duration>
+<itunes:episode>18</itunes:episode>
+<itunes:author>Patsy Root, Legionella specialist on a hospital water management team</itunes:author>
+<itunes:explicit>false</itunes:explicit>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,8 @@
+name = "lats-radio-log"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+workers_dev = true
+
+[[kv_namespaces]]
+binding = "LOG"
+id = "6ed22d0a22514fab8ca5c5ea66e1daac"

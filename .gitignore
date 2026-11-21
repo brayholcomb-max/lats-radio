@@ -1,0 +1,9 @@
+.venv/
+.work/
+logs/
+config.local.json
+.DS_Store
+__pycache__/
+.models/
+.listen-read-key
+log-worker/.wrangler/
